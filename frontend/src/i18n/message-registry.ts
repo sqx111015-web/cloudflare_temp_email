@@ -549,8 +549,8 @@ export const MESSAGE_REGISTRY = {
       "zh": "状态"
     },
     "title": {
-      "en": "Cloudflare Temp Email",
-      "zh": "Cloudflare 临时邮件"
+      "en": "YuHan-Email",
+      "zh": "YuHan-Email"
     },
     "user": {
       "en": "User",
