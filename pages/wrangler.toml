@@ -1,8 +1,17 @@
-name = "temp-email-pages"
-pages_build_output_dir = "../frontend/dist"
-compatibility_date = "2024-05-13"
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = [ "nodejs_compat" ]
 
-[[services]]
-binding = "BACKEND"
-service = "cloudflare_temp_email"
-environment = "production"
+[vars]
+PREFIX = "tmp"
+DOMAINS = ["gjiwgqdzfv.gbcos.xyz", "mail.safaa.cn"]
+JWT_SECRET = "0b3d9e58b6f24c8d9a1f7c0e4d2b8a6f3e9c1d7b5a4f8e2c6d0a9b3e7f1c5d8a"
+
+ENABLE_USER_CREATE_EMAIL = true
+ENABLE_USER_DELETE_EMAIL = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudflare_temp_email"
+database_id = "5bf2d9d3-b6d3-4cd0-86e6-acfa84460f36"
